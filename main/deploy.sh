@@ -11,9 +11,7 @@ gcloud functions deploy random-cat \
     --trigger-http \
     --allow-unauthenticated \
     --timeout 300s \
-    --set-secrets "SLACK_SIGNING_SECRET_RANDOM_CAT=SLACK_SIGNING_SECRET_RANDOM_CAT:latest" \
-    --set-secrets "SLACK_TEAM_ID=SLACK_TEAM_ID:latest" \
-    --set-secrets "SLACK_USER_WHITELIST=SLACK_USER_WHITELIST:latest"
+    --set-secrets "SLACK_SIGNING_SECRET_RANDOM_CAT=SLACK_SIGNING_SECRET_RANDOM_CAT:latest"
 
 REPOSITORY=gcf-artifacts
 PACKAGE=random--cat

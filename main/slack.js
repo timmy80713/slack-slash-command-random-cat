@@ -7,11 +7,11 @@ function verify(req) {
         throw new Error('Only POST requests are accepted');
     }
     const teamId = req.body.team_id;
-    if (teamId !== process.env.SLACK_TEAM_ID) {
+    if (teamId !== "T03180XEC") {
         throw new Error('You cannot use this slash command in this Slack team.');
     }
     const userId = req.body.user_id;
-    const userWhitelist = process.env.SLACK_USER_WHITELIST.split(",");
+    const userWhitelist = ["U025MBKQ8QJ"];
     if (!userWhitelist.includes(userId)) {
         throw new Error('You cannot use this slash command.');
     }
